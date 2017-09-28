@@ -59,3 +59,20 @@ Run the tests:
 ```bash
 bundle exec ruby test/array_helper_test.rb
 ```
+
+To run at the command line, with the `irb` REPL:
+
+```bash
+bundle exec irb
+```
+
+```ruby
+> require_relative "app/array_helper"
+>
+> ArrayHelper.new.divide([1, 2, 3, 4, 5], 3)
+[[1, 2], [3, 4], [5]]
+> ArrayHelper.new.divide([1, 2, 3, 4, 5], 4)
+[[1], [2], [3], [4, 5]]
+> ArrayHelper.new.divide([1, 2, 3, 4, 5], 5)
+[[1], [2], [3], [4], [5]]
+```
